@@ -10,6 +10,7 @@ html{
     font-size: 62.5%;
 }
 body{
+    
     background-color: black;
     display: flex;
     justify-content: center;
@@ -23,16 +24,17 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: hsl(234, 29%, 20%);;
+    background-color: hsl(235, 18%, 26%);
+
 }
 
 .blueBg{
-    width: 75%;
-    height: 68%;
+    width: 640px;
+    max-height: 440px;
     background-color:white;
     border-radius: 2rem;
     position: relative;
-   
+    
    
 }
 
@@ -49,18 +51,63 @@ section{
    margin-left: 3rem;
    display: flex;
    flex-direction: column;
-   flex-wrap: wrap;
    gap: 10px;
+   text-wrap: wrap;
+   color: hsl(235, 18%, 26%);
+   line-height: 2rem;
+
 }
 
 section h1{
 font-size: xx-large;
 line-height: 5rem;
+text-wrap: wrap;
 }
 
 section p {
-    line-height: 30px;
+    line-height: 5rem;
 }
+
+section li{
+    list-style: none;
+    position: relative;
+   
+    
+}
+ li::before{
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: -8%;
+    background-image: url('assets/images/icon-list.svg');
+    background-size: contain;
+    width: 15px;
+    height: 15px;
+}
+
+
+
+section input {
+    line-height: 3rem;
+    width: 25rem;
+    border-color: hsl(0, 0%,58%);
+    text-align: center;
+    border-width: 1px;
+    border-radius: 5px;
+}
+.subscribe{
+    line-height: 4rem;
+    border: 1px solid hsl(0, 0%,58%);
+    width: 25rem;
+    text-align: center;
+    background-color: hsl(234, 29%, 20%);
+    color: white;
+    border-radius: 5px;
+}
+#mobileImg{
+    display: none;
+}
+
 
 
 aside{
@@ -71,9 +118,46 @@ aside{
 
 
 
-img{
+#desktopImg{
     width:28rem;
+    height: 100%;
     border-radius: 1rem;
     
 } 
+
+
+@media(max-width:1000px){
+    body{
+        background-color: hsl(235, 18%, 26%);
+    }
+
+    .container{
+        width: 100%;
+    }
+}
+
+@media(max-width:650px){
+    .container{
+        background-color: white;
+    }
+    .contents{
+        display:flex ;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .blueBg{
+        width: 100%;
+    }
+    #desktopImg{
+        display: none;
+    }
+    .contents{
+        display: flex;
+        flex-direction: column;
+    }
+    #mobileImg{
+        display: none;
+    }
+    }
+    
 
