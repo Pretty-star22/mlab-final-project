@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: Roboto, sans-serif;
+    font-family:Roboto, sans-serif;
 
 }
 
@@ -18,7 +21,7 @@ body{
     
 }
 
-.container{
+.container {
     width: 60vw;
     height: 100vh;
     display: flex;
@@ -28,15 +31,20 @@ body{
 
 }
 
+
+
 .blueBg{
     width: 640px;
     max-height: 440px;
     background-color:white;
     border-radius: 2rem;
-    position: relative;
+    position: relative;  
+}
 
-    
-   
+#right{
+    width: 360px;
+    padding: 25px;
+    text-wrap: wrap;
 }
 
 .contents{
@@ -45,7 +53,9 @@ body{
     flex-wrap: nowrap;
     align-items: center;
     justify-content: space-around;
+
 }
+
 
 section{
    font-size: small;
@@ -93,7 +103,7 @@ section li{
 
 
 
-section input {
+ input {
     line-height: 3rem;
     width: 25rem;
     border-color: hsl(0, 0%,58%);
@@ -102,7 +112,8 @@ section input {
     border-radius: 5px;
     cursor: pointer;
 }
-.subscribe{
+
+.subscribe,.dismiss{
     line-height: 4rem;
     border: 1px solid hsl(0, 0%,58%);
     width: 25rem;
@@ -112,6 +123,24 @@ section input {
     border-radius: 5px;
     cursor: pointer;
 }
+
+.subscribe:hover,.dismiss:hover{
+    background:linear-gradient(to left, hsl(4, 100%, 67%), rgb(248, 103, 127))
+}
+
+a:link{
+    color: white;
+    text-decoration: none;
+}
+
+a:visited{
+    color: white;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+
 #mobileImg{
     display: none;
 }
@@ -128,14 +157,16 @@ aside{
 
 #desktopImg{
     width:28rem;
-    height: 100%;
     border-radius: 1rem;
-    
+
 } 
 .attribution{
     display: none;
 }
-
+#successIcon{
+    width: 50px;
+    height: 50px;
+}
 
 @media(max-width:1000px){
     body{
