@@ -189,14 +189,28 @@ aside{
     .container{
         width: 100%;
     }
+   
 }
 
 @media(max-width:650px){
     body{
         background-color: white;
+        display: flex;
+        flex-direction: column;
+    }
+    #successBody{
+        height: 100vh;
     }
     .container{
         background-color: white;
+        display: flex;
+        align-items: flex-start;
+        height: auto;
+
+    }
+    #containerSuccess{
+        align-items: center;
+       justify-content: center;
     }
     .contents{
         display:flex ;
@@ -206,6 +220,7 @@ aside{
         width: 100%;
         margin-top: 0;
     }
+
     section{
         order: 5;
     }
