@@ -30,9 +30,16 @@
   <li>Measuring to ensure updates are a success</li>
   <li>And much more!</li>
   </ul>
-
+   
+  <div class="error">
+  <div class="emailContainer">
   <h3>Email address</h3>
+
+  <h3 id="errMessage">enter valid email</h3>
+  </div>
   <input type="email" placeholder="email@company.com" id="input">
+  </div>
+
  
 <div class="subscribe">
 <a href="success.html">Subscribe to monthly newsletter</a>
@@ -48,7 +55,17 @@
  </div>
  </div>
  <script>
-let input = document.getElementById('input');
+const emailInput = document.getElementById('input');
+const emailError = document.getElementById('errMessage');
+const email = emailInput.value.trim();
+
+
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$\;
+if(!emailRegex.test(email)){
+  event.preventDefault();
+  
+
+}
 
  </script>
 </body>
